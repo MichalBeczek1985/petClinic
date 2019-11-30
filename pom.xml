@@ -21,15 +21,9 @@
 
     <properties>
         <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
-    <dependencies>
-
-
-
-
-
-    </dependencies>
 
     <build>
         <plugins>
@@ -37,7 +31,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>
+                        install
+                    </goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
+    <scm>
+        <developerConnection>scm:git:https://github.com/MichalBeczek1985/petClinic.git</developerConnection>
+    </scm>
 </project>
