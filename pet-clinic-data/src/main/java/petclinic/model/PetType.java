@@ -1,4 +1,4 @@
-package pl.majkel.petclinic.model;
+package petclinic.model;
 
 import lombok.Getter;
 import lombok.Setter;
