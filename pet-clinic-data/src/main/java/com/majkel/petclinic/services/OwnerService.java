@@ -1,6 +1,6 @@
-package petclinic.services;
+package com.majkel.petclinic.services;
 
-import petclinic.model.Owner;
+import com.majkel.petclinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner,Long> {
     Owner findByLastName(String lastname);

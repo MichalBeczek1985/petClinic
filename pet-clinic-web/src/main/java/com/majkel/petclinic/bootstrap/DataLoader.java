@@ -1,23 +1,23 @@
 package com.majkel.petclinic.bootstrap;
 
+import com.majkel.petclinic.model.Owner;
+import com.majkel.petclinic.model.Vet;
+import com.majkel.petclinic.services.OwnerService;
+import com.majkel.petclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import petclinic.model.Owner;
-import petclinic.model.Vet;
-import petclinic.services.OwnerService;
-import petclinic.services.VetService;
-import petclinic.services.map.OwnerServiceMap;
-import petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
